@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "clouds"
+version = "0.1.0"
+description = "clouds course assignment"
+authors = ["einsteinyan <pradhansarathy@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.87.0"
+uvicorn = "^0.20.0"
+numpy = "^1.23.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
