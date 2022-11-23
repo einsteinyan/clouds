@@ -1,10 +1,6 @@
-from fastapi import FastAPI
+from flask import Flask, request, render_template
 import numpy as np
-
-app = FastAPI(
-    title="Clouds API",
-    description="Clouds course REST API",
-)
+app = Flask(__name__)
 
 def numerically_integrate(f, a, b):
     """ Integrates a given fn
@@ -19,8 +15,13 @@ def numerically_integrate(f, a, b):
     """
     return (b-a)*np.mean(f)
 
-@app.get("/")
-async def get_integral_approximation(lower_bound: float, upper_bound: float):
+@app.route('/')
+def index():
+   print('Request for index page received')
+   return render_template('index.html')
+
+@app.route("/integral", methods=['GET'])
+def get_integral_approximation():
     """ Returns numerical integral approximatios for 7 different scales of intervals
     for the fn, f(x) = abs(sin(x))
 
@@ -31,6 +32,9 @@ async def get_integral_approximation(lower_bound: float, upper_bound: float):
     Returns:
         y (arra<float>): Numerical approximations
     """
+    lower_bound = request.args.get('lower_bound',  type = float, default= 0)
+    upper_bound = request.args.get('upper_bound',  type = float, default= 3.14)
+
     intervals = [10**i for i in range(1, 8)]
     approximations = []
 
@@ -42,3 +46,7 @@ async def get_integral_approximation(lower_bound: float, upper_bound: float):
         approximations.append(result)
 
     return {"result": approximations}
+
+
+if __name__ == '__main__':
+   app.run()
