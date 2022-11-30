@@ -1,0 +1,14 @@
+{
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "appService.defaultWebAppToDeploy": "/subscriptions/b2cfb2da-e664-4bc2-a21a-18c86ae2b6d3/AppServices/subscriptions/b2cfb2da-e664-4bc2-a21a-18c86ae2b6d3/resourceGroups/clouds-group/providers/Microsoft.Web/sites/clouds-webapp/Deployments/9e81416b-315e-4637-9e1c-fa21d3b861ad/subscriptions/b2cfb2da-e664-4bc2-a21a-18c86ae2b6d3/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/clouds-app",
+    "appService.deploySubpath": "assignments/2/webapp",
+    "azureFunctions.deploySubpath": "api",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen"
+}
