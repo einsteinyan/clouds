@@ -5,4 +5,4 @@
   - [FastAPI App](/2/vm-fastapi)
   - [Flask App](/2/app-flask)
   - [Functions](/2/fns-app)
-  - [MapReducer](/durable-fns)
+  - [MapReducer](/2/durable-fns)
